@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="inclinometer.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:inclinometer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Play" Label="Start" Click="AppBarButton_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="_x_spnl_inclinometerTitle" Grid.Row="1">
+            <TextBlock x:Name="_x_tbl_inclinometer" 
+                       Text="Inclinometer" Height="50" 
+                       Width="150" TextAlignment="Center" FontSize="24"/>
+                       
+        </StackPanel>
+        <StackPanel x:Name="_x_spnl_incReading" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <TextBox x:Name="_x_tbx_x" Height="50" Width="110" Margin="10"/>
+            <TextBox x:Name="_x_tbx_y" Height="50" Width="110" Margin="10"/>
+            <TextBox x:Name="_x_tbx_z" Height="50" Width="110" Margin="10"/>
+        </StackPanel>
+        <StackPanel x:Name="_x_spnl_compass" Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <TextBlock x:Name="_x_tbl_compass" Text="Compass" Height="50" 
+                       Width="150" TextAlignment="Center" FontSize="24"/>
+        </StackPanel>
+        <StackPanel x:Name="_x_spnl_compReading" Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <TextBox x:Name="_x_tbx_yc" Height="50" Width="110" Margin="10"/>
+            <TextBox x:Name="_x_tbx_zc" Height="50" Width="110" Margin="10"/>
+        </StackPanel>
+        <StackPanel x:Name="_x_spnl_compdirection" Grid.Row="9" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock x:Name="_x_tbk_direction" Foreground="Red" Height="50" 
+                       Width="150" TextAlignment="Center" FontSize="24"/>
+        </StackPanel>
+    </Grid>
+</Page>
